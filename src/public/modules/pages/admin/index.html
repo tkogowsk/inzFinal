@@ -1,0 +1,44 @@
+<div ng-controller="AdminController" class="col-lg-8 admin">
+
+    <button type="button" class="btn btn-default"><a href="/upload">Upload</a></button>
+
+    <div>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>
+                    User name
+                </th>
+                <th>
+                    Role
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="user in users track by $index">
+                <td>
+                    <a ui-sref="privileges({userId: user.id})">
+                        {{user.name}}
+                    </a>
+                </td>
+                <td>
+                    {{user.role}}
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="spinner-background" ng-show="showFilterSpinner">
+        <div class="sk-cube-grid">
+            <div class="sk-cube sk-cube1"></div>
+            <div class="sk-cube sk-cube2"></div>
+            <div class="sk-cube sk-cube3"></div>
+            <div class="sk-cube sk-cube4"></div>
+            <div class="sk-cube sk-cube5"></div>
+            <div class="sk-cube sk-cube6"></div>
+            <div class="sk-cube sk-cube7"></div>
+            <div class="sk-cube sk-cube8"></div>
+            <div class="sk-cube sk-cube9"></div>
+        </div>
+    </div>
+</div>

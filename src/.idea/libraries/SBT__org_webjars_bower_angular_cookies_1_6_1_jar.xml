@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="SBT: org.webjars.bower:angular-cookies:1.6.1:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/org.webjars.bower/angular-cookies/jars/angular-cookies-1.6.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/org.webjars.bower/angular-cookies/srcs/angular-cookies-1.6.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

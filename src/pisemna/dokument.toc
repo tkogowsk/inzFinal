@@ -1,0 +1,62 @@
+\contentsline {section}{\numberline {1}Wst\IeC {\k e}p}{6}
+\contentsline {subsection}{\numberline {1.1}Motywacja}{6}
+\contentsline {subsection}{\numberline {1.2}Cel pracy}{7}
+\contentsline {section}{\numberline {2}\leavevmode {\color {red}Podstawy teoretyczne}}{8}
+\contentsline {section}{\numberline {3}Wymagania funkcjonalne i niefunkcjonalne}{9}
+\contentsline {subsection}{\numberline {3.1}Wymagania funkcjonalne}{10}
+\contentsline {subsection}{\numberline {3.2}Wymagania niefunkcjonalne}{11}
+\contentsline {section}{\numberline {4}Istniej\IeC {\k a}ce rozwi\IeC {\k a}zania}{12}
+\contentsline {paragraph}{Exac broad institute}{12}
+\contentsline {paragraph}{Exac Harvard}{13}
+\contentsline {section}{\numberline {5}Wyb\IeC {\'o}r technologi}{14}
+\contentsline {subsection}{\numberline {5.1}J\IeC {\k e}zyk programowania Scala}{14}
+\contentsline {subsection}{\numberline {5.2}System zarz\IeC {\k a}dzania baz\IeC {\k a} danych}{15}
+\contentsline {subsubsection}{\numberline {5.2.1}MySQL}{15}
+\contentsline {paragraph}{Zalety}{15}
+\contentsline {paragraph}{Wady}{15}
+\contentsline {subsubsection}{\numberline {5.2.2}SQLite}{15}
+\contentsline {paragraph}{Zalety}{15}
+\contentsline {paragraph}{Wady}{16}
+\contentsline {subsubsection}{\numberline {5.2.3}PostgreSQL}{16}
+\contentsline {paragraph}{Zalety}{16}
+\contentsline {paragraph}{Wady}{16}
+\contentsline {subsubsection}{\numberline {5.2.4}Uzasadnienie wyboru PostgreSQL}{16}
+\contentsline {subsection}{\numberline {5.3}Slick}{16}
+\contentsline {subsection}{\numberline {5.4}JDBC}{17}
+\contentsline {subsection}{\numberline {5.5}Aplikacja przegl\IeC {\k a}darkowa}{17}
+\contentsline {paragraph}{Zalety aplikacji internetowych}{17}
+\contentsline {paragraph}{Platforma programistyczna Play}{17}
+\contentsline {paragraph}{Platforma programistyczna Angular}{17}
+\contentsline {paragraph}{Lodash}{18}
+\contentsline {section}{\numberline {6}Przypadki u\IeC {\.z}ycia}{19}
+\contentsline {subsection}{\numberline {6.1}Autoryzacja}{19}
+\contentsline {subsubsection}{\numberline {6.1.1}Role}{19}
+\contentsline {subsubsection}{\numberline {6.1.2}Rejestracja i logowanie u\IeC {\.z}ytkownika}{19}
+\contentsline {subsection}{\numberline {6.2}Przegl\IeC {\k a}danie danych z sekwencjownowania DNA}{20}
+\contentsline {paragraph}{Ekran dost\IeC {\k e}pnych genom\IeC {\'o}w}{20}
+\contentsline {paragraph}{\leavevmode {\color {red} Tabela z danymi z sekwencjonowania DNA - lepsza nazwa? Czy pokaza\IeC {\'c} tylko jedno zdj\IeC {\k e}cie ca\IeC {\l }ej strony?} }{21}
+\contentsline {paragraph}{Ustawianie widoczno\IeC {\'s}ci kolumn}{23}
+\contentsline {paragraph}{Filtrowanie danych}{24}
+\contentsline {subsection}{\numberline {6.3}Panel administratora}{28}
+\contentsline {paragraph}{Zarz\IeC {\k a}dzanie filtrami}{29}
+\contentsline {paragraph}{Zarz\IeC {\k a}dzanie widoczno\IeC {\'s}ci\IeC {\k a} pr\IeC {\'o}bek dla u\IeC {\.z}ytkownik\IeC {\'o}w}{30}
+\contentsline {section}{\numberline {7}Schemat bazy danych}{31}
+\contentsline {paragraph}{Dane o u\IeC {\.z}ytkowniku}{32}
+\contentsline {paragraph}{Dane z sekwencjonowania DNA}{32}
+\contentsline {paragraph}{Sztuczne identyfikatory pr\IeC {\'o}bek}{32}
+\contentsline {paragraph}{Dost\IeC {\k e}p do pr\IeC {\'o}bek}{33}
+\contentsline {paragraph}{Lista kolumn}{33}
+\contentsline {paragraph}{Widoczno\IeC {\'s}\IeC {\'c} kolumn}{33}
+\contentsline {paragraph}{Przechowywanie schematu filtr\IeC {\'o}w}{34}
+\contentsline {paragraph}{Zapisywanie warto\IeC {\'s}ci filtr\IeC {\'o}w dla u\IeC {\.z}ytkownika}{34}
+\contentsline {section}{\numberline {8}Testy wydajno\IeC {\'s}ci}{35}
+\contentsline {paragraph}{Rozmiar przesy\IeC {\l }anych danych}{36}
+\contentsline {paragraph}{Czas trwania \IeC {\.z}\IeC {\k a}dania HTTP}{37}
+\contentsline {paragraph}{Czas generowania modelu w cz\IeC {\k e}\IeC {\'s}ci klienckiej}{38}
+\contentsline {paragraph}{Czas dodawania element\IeC {\'o}w do DOMu przegl\IeC {\k a}darki przez platform\IeC {\k e} Angular}{38}
+\contentsline {section}{\numberline {9}Opis implementacji}{40}
+\contentsline {section}{\numberline {10}Bezpiecze\IeC {\'n}stwo aplikacji}{40}
+\contentsline {paragraph}{SQL injection}{41}
+\contentsline {section}{\numberline {11}Wnioski i podsumowania}{42}
+\contentsline {section}{Literatura}{42}
+\contentsline {section}{Wykaz rysunk\IeC {\'o}w i tabel}{45}

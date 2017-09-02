@@ -1,0 +1,212 @@
+<div class="row">
+    <div ng-controller="FilterController" class="col-lg-2 col-md-2">
+        <div class="filter-section">
+            <h3>Filters</h3>
+            <div class="filter-tabs">
+                <div ng-repeat="tab in groupedData" class="filter-tab">
+
+                    <div class="filter-tab-name" ng-click="filterTabNameClicked(tab.tabName); $event.stopPropagation()"
+                         ng-class="{ active: (tab.tabName == activeTabName)}">
+                        {{tab.tabName}}
+                    </div>
+
+                </div>
+            </div>
+
+            <div ng-repeat="tab in groupedData" class="filter-fields">
+                <div ng-show="tab.tabName == activeTabName" style="text-align: center">
+                    <div ng-repeat="filter in tab.items track by $index" class="filter"
+                         ng-class="{ inactive: filter.inactive }">
+                        <div class="filter-name">
+                            {{filter.filterName}}
+                            <label>
+                                Inactive
+                                <input type="checkbox" name="inactive" ng-model="filter.inactive">
+                            </label>
+                        </div>
+                        <div ng-repeat="field in filter.items track by $index">
+                            <div class="filter-field">
+                                <div ng-switch="field.relation">
+                                    <div ng-switch-when="=">
+                                        <p>{{getColumnName(field.variantColumnId)}} equals</p>
+                                        <div ng-if="(field.options) && field.options.length > 0">
+                                            <select data-ng-model="field.value"
+                                                    ng-options="o as o for o in field.options"></select>
+                                        </div>
+
+                                        <div ng-if="!(field.options) || field.options.length === 0">
+                                            <input type="text" ng-model="field.value">
+                                        </div>
+                                    </div>
+                                    <div ng-switch-when=">=">
+                                        <p>{{getColumnName(field.variantColumnId)}} greater than</p>
+                                        <div ng-if="(field.options) && field.options.length > 0">
+                                            <select data-ng-model="field.value"
+                                                    ng-options="o  as o for o in field.options"></select>
+                                        </div>
+                                        <div ng-if="!(field.options) || field.options.length === 0">
+                                            <input type="text" ng-model="field.value">
+                                        </div>
+                                    </div>
+                                    <div ng-switch-when=">">
+                                        <p>{{getColumnName(field.variantColumnId)}} greater</p>
+                                        <div ng-if="(field.options) && field.options.length > 0">
+                                            <select data-ng-model="field.value"
+                                                    ng-options="o  as o for o in field.options"></select>
+                                        </div>
+                                        <div ng-if="!(field.options) || field.options.length === 0">
+                                            <input type="text" ng-model="field.value">
+                                        </div>
+                                    </div>
+                                    <div ng-switch-when="<=">
+                                        <p>{{getColumnName(field.variantColumnId)}} less than</p>
+                                        <div ng-if="(field.options) && field.options.length > 0">
+                                            <select data-ng-model="field.value"
+                                                    ng-options="o  as o for o in field.options"></select>
+                                        </div>
+                                        <div ng-if="!(field.options) || field.options.length === 0">
+                                            <input type="text" ng-model="field.value">
+                                        </div>
+                                    </div>
+                                    <div ng-switch-when="<">
+                                        <p>{{getColumnName(field.variantColumnId)}} less</p>
+                                        <div ng-if="(field.options) && field.options.length > 0">
+                                            <select ng-model="field.value"
+                                                    ng-options="o  as o for o in field.options"></select>
+                                        </div>
+                                        <div ng-if="!(field.options) || field.options.length === 0">
+                                            <input type="text" ng-model="field.value">
+                                        </div>
+                                    </div>
+                                    <div ng-switch-when="contains">
+                                        <p>{{getColumnName(field.variantColumnId)}} contains ( comma separated
+                                            values) </p>
+                                        <div ng-if="(field.options) && field.options.length > 0">
+                                            <select ng-model="field.v"
+                                                    ng-options="o  as o for o in field.options"></select>
+                                        </div>
+                                        <div ng-if="!(field.options) || field.options.length === 0">
+                                            <input type="text" ng-model="field.v">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div ng-if="filter.countValue != null">
+                            This selection reduce list length to {{filter.countValue}}
+                        </div>
+                    </div>
+                    <div class="filter-buttons">
+                        <button type="button" class="btn btn-primary btn-sm"
+                                ng-click="filter(tab)">Filter
+                        </button>
+                        <button type="button" class="btn btn-primary btn-sm"
+                                ng-click="count(tab)">Count
+                        </button>
+                        <button type="button" class="btn btn-primary btn-sm"
+                                ng-click="saveUserFields(tab)">Save
+                        </button>
+                        <button type="button" class="btn btn-primary btn-sm"
+                                ng-click="getAll()">Get all
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="spinner-background" ng-show="showFilterSpinner">
+                <div class="sk-cube-grid">
+                    <div class="sk-cube sk-cube1"></div>
+                    <div class="sk-cube sk-cube2"></div>
+                    <div class="sk-cube sk-cube3"></div>
+                    <div class="sk-cube sk-cube4"></div>
+                    <div class="sk-cube sk-cube5"></div>
+                    <div class="sk-cube sk-cube6"></div>
+                    <div class="sk-cube sk-cube7"></div>
+                    <div class="sk-cube sk-cube8"></div>
+                    <div class="sk-cube sk-cube9"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div ng-controller="TranscriptsTableController" class="col-lg-10 col-md-10">
+        <div class="transcript-table table-wrapper">
+            <table class="table">
+                <thead class="thead-inverse">
+                <tr>
+                    <th ng-repeat="header in userColumnsList | orderBy: 'column_order' track by header.column_order"
+                        ng-click="changeSorting(header)" ng-if="header.visible">
+                        <div ng-class="getSorting(header)"></div>
+                        <div class="header-fe-name" title="{{header.feName}}">{{header.feName}}</div>
+                    </th>
+                </tr>
+                <tr>
+                    <th ng-repeat="header in userColumnsList | orderBy: 'column_order' track by header.column_order"
+                        ng-if="header.visible">
+                        <div class="search">
+                            <div class="glyphicon glyphicon-search"></div>
+                            <input ng-model="search[jsIDPrefix + header.variantColumnId]"/>
+                        </div>
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="transcript in filterData = (transcriptData | filter : search | orderBy: transcriptSortPropertyName: transcriptSortReverse) | limitTo : tableLimit : tableBegin track by $index">
+                    <td ng-repeat="header in userColumnsList | orderBy: 'column_order' track by header.column_order"
+                        ng-if="header.visible">
+                        {{transcript[header.dataExtractValue]}}
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="spinner-background" ng-show="showTableSpinner">
+                <div class="sk-cube-grid">
+                    <div class="sk-cube sk-cube1"></div>
+                    <div class="sk-cube sk-cube2"></div>
+                    <div class="sk-cube sk-cube3"></div>
+                    <div class="sk-cube sk-cube4"></div>
+                    <div class="sk-cube sk-cube5"></div>
+                    <div class="sk-cube sk-cube6"></div>
+                    <div class="sk-cube sk-cube7"></div>
+                    <div class="sk-cube sk-cube8"></div>
+                    <div class="sk-cube sk-cube9"></div>
+                </div>
+            </div>
+        </div>
+        <div class="transcript-table-pagination">
+            <ul uib-pagination total-items="filterData.length" ng-model="currentPage" max-size="10"
+                items-per-page="tableLimit"
+                class="pagination-sm" boundary-link-numbers="true" rotate="false" ng-change="pageChanged()"></ul>
+            <button type="button" class="btn btn-primary btn-sm" ng-click="openShowHideColumnsModal()">Show/hide
+                colums
+            </button>
+        </div>
+        <div class="modal-root"></div>
+
+        <script type="text/ng-template" id="myModalContent.html">
+            <div class="modal-header">
+                <h3 class="modal-title" id="modal-title">Select visible columns</h3>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <table class="table">
+                    <thead>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="column in $ctrl.columns | orderBy: 'column_order' track by column.column_order">
+                        <td>
+                            {{column.columnName}}
+                        </td>
+                        <td>
+                            <input type="checkbox" ng-model="column.visible">
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" type="button" ng-click="$ctrl.save()">Save</button>
+                <button class="btn btn-warning" type="button" ng-click="$ctrl.cancel()">Cancel</button>
+            </div>
+        </script>
+    </div>
+</div>
+

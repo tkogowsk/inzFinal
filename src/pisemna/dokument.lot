@@ -1,0 +1,7 @@
+\contentsline {table}{\numberline {1}{\ignorespaces Rozmiar odpowiedzi HTTP wzgl\IeC {\k e}dem rozmiaru wybranej pr\IeC {\'o}bki DNA\relax }}{36}
+\contentsline {table}{\numberline {2}{\ignorespaces Rozmiar odpowiedzi HTTP wzgl\IeC {\k e}dem rozmiaru wybranej pr\IeC {\'o}bki DNA po optymalizacji przesy\IeC {\l }anego modelu\relax }}{36}
+\contentsline {table}{\numberline {3}{\ignorespaces Czasy trwania \IeC {\.z}\IeC {\k a}dania HTTP oraz czasy przetwarzania danych pobranych z bazy danych (w tym czas po\IeC {\l }\IeC {\k a}czenia z baz\IeC {\k a} danych) wzgl\IeC {\k e}dem rozmiaru danych \relax }}{37}
+\contentsline {table}{\numberline {4}{\ignorespaces Czasy trwania \IeC {\.z}\IeC {\k a}dania HTTP oraz czasy przetwarzania danych pobranych z bazy danych (w tym czas po\IeC {\l }\IeC {\k a}czenia z baz\IeC {\k a} danych) wzgl\IeC {\k e}dem rozmiaru danych po zaimplementowaniu mechanizmu pami\IeC {\k e}ci podr\IeC {\k e}cznej\relax }}{37}
+\contentsline {table}{\numberline {5}{\ignorespaces Czasy przekszta\IeC {\l }ce\IeC {\'n} w przegl\IeC {\k a}darce klienckiej wzgl\IeC {\k e}dem rozmiaru obiektu\relax }}{38}
+\contentsline {table}{\numberline {6}{\ignorespaces Czasy dodawania element\IeC {\'o}w do DOMu HTML przez platform\IeC {\k e} Angular\relax }}{38}
+\contentsline {table}{\numberline {7}{\ignorespaces Czasy dodawania element\IeC {\'o}w do DOMu HTML przez platform\IeC {\k e} Angular\relax }}{39}
