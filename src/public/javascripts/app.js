@@ -1,4 +1,4 @@
-var myApp = angular.module('app', ['ui.router', 'ui.bootstrap', 'Controllers', 'filter', 'Repositories', 'Models', 'transcripts', 'Security', 'Admin',
+var myApp = angular.module('app', ['ui.router', 'ui.bootstrap', 'Controllers', 'filter', 'Repositories', 'transcripts', 'Security', 'Admin',
     'LocalStorageModule', 'angularUtils.directives.dirPagination', 'ngCookies']);
 
 myApp.config(function ($stateProvider, $locationProvider, $urlRouterProvider) {
