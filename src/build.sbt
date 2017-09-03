@@ -1,3 +1,5 @@
+import play.sbt.PlayScala
+
 name := "Inz"
 
 version := "1.0"
