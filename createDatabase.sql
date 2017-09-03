@@ -5,7 +5,7 @@
 -- Dumped from database version 9.5.8
 -- Dumped by pg_dump version 9.5.8
 
--- Started on 2017-09-02 16:04:40 CEST
+-- Started on 2017-09-03 18:19:49 CEST
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -39,7 +39,7 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- TOC entry 186 (class 1259 OID 16629)
+-- TOC entry 181 (class 1259 OID 26872)
 -- Name: field; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -52,7 +52,7 @@ CREATE TABLE field (
 
 
 --
--- TOC entry 185 (class 1259 OID 16627)
+-- TOC entry 182 (class 1259 OID 26878)
 -- Name: field_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
@@ -66,7 +66,7 @@ CREATE SEQUENCE field_id_seq
 
 --
 -- TOC entry 2243 (class 0 OID 0)
--- Dependencies: 185
+-- Dependencies: 182
 -- Name: field_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
@@ -74,7 +74,7 @@ ALTER SEQUENCE field_id_seq OWNED BY field.id;
 
 
 --
--- TOC entry 188 (class 1259 OID 16640)
+-- TOC entry 183 (class 1259 OID 26880)
 -- Name: filter; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -85,7 +85,7 @@ CREATE TABLE filter (
 
 
 --
--- TOC entry 187 (class 1259 OID 16638)
+-- TOC entry 184 (class 1259 OID 26886)
 -- Name: filter_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
@@ -99,7 +99,7 @@ CREATE SEQUENCE filter_id_seq
 
 --
 -- TOC entry 2244 (class 0 OID 0)
--- Dependencies: 187
+-- Dependencies: 184
 -- Name: filter_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
@@ -107,7 +107,7 @@ ALTER SEQUENCE filter_id_seq OWNED BY filter.id;
 
 
 --
--- TOC entry 191 (class 1259 OID 16668)
+-- TOC entry 185 (class 1259 OID 26888)
 -- Name: privilege; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -120,7 +120,7 @@ CREATE TABLE privilege (
 
 
 --
--- TOC entry 198 (class 1259 OID 17157)
+-- TOC entry 186 (class 1259 OID 26895)
 -- Name: sample_metadata; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -131,7 +131,7 @@ CREATE TABLE sample_metadata (
 
 
 --
--- TOC entry 197 (class 1259 OID 17155)
+-- TOC entry 187 (class 1259 OID 26901)
 -- Name: sample_metadata_fake_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
@@ -145,7 +145,7 @@ CREATE SEQUENCE sample_metadata_fake_id_seq
 
 --
 -- TOC entry 2245 (class 0 OID 0)
--- Dependencies: 197
+-- Dependencies: 187
 -- Name: sample_metadata_fake_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
@@ -153,7 +153,7 @@ ALTER SEQUENCE sample_metadata_fake_id_seq OWNED BY sample_metadata.fake_id;
 
 
 --
--- TOC entry 184 (class 1259 OID 16618)
+-- TOC entry 188 (class 1259 OID 26903)
 -- Name: tab; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -164,7 +164,7 @@ CREATE TABLE tab (
 
 
 --
--- TOC entry 192 (class 1259 OID 16677)
+-- TOC entry 189 (class 1259 OID 26909)
 -- Name: tab_field_filter; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -177,7 +177,7 @@ CREATE TABLE tab_field_filter (
 
 
 --
--- TOC entry 183 (class 1259 OID 16616)
+-- TOC entry 190 (class 1259 OID 26915)
 -- Name: tab_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
@@ -191,7 +191,7 @@ CREATE SEQUENCE tab_id_seq
 
 --
 -- TOC entry 2246 (class 0 OID 0)
--- Dependencies: 183
+-- Dependencies: 190
 -- Name: tab_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
@@ -199,7 +199,7 @@ ALTER SEQUENCE tab_id_seq OWNED BY tab.id;
 
 
 --
--- TOC entry 181 (class 1259 OID 16600)
+-- TOC entry 191 (class 1259 OID 26917)
 -- Name: transcript; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -246,7 +246,7 @@ CREATE TABLE transcript (
 
 
 --
--- TOC entry 182 (class 1259 OID 16607)
+-- TOC entry 192 (class 1259 OID 26923)
 -- Name: transcript_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
@@ -260,7 +260,7 @@ CREATE SEQUENCE transcript_id_seq
 
 --
 -- TOC entry 2247 (class 0 OID 0)
--- Dependencies: 182
+-- Dependencies: 192
 -- Name: transcript_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
@@ -268,7 +268,7 @@ ALTER SEQUENCE transcript_id_seq OWNED BY transcript.id;
 
 
 --
--- TOC entry 190 (class 1259 OID 16651)
+-- TOC entry 193 (class 1259 OID 26925)
 -- Name: user; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -282,7 +282,7 @@ CREATE TABLE "user" (
 
 
 --
--- TOC entry 189 (class 1259 OID 16649)
+-- TOC entry 194 (class 1259 OID 26932)
 -- Name: user_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
@@ -296,7 +296,7 @@ CREATE SEQUENCE user_id_seq
 
 --
 -- TOC entry 2248 (class 0 OID 0)
--- Dependencies: 189
+-- Dependencies: 194
 -- Name: user_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
@@ -304,7 +304,7 @@ ALTER SEQUENCE user_id_seq OWNED BY "user".id;
 
 
 --
--- TOC entry 196 (class 1259 OID 16701)
+-- TOC entry 195 (class 1259 OID 26934)
 -- Name: user_smp_tab; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -319,7 +319,7 @@ CREATE TABLE user_smp_tab (
 
 
 --
--- TOC entry 195 (class 1259 OID 16696)
+-- TOC entry 196 (class 1259 OID 26940)
 -- Name: user_visible_variant_column; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -330,7 +330,7 @@ CREATE TABLE user_visible_variant_column (
 
 
 --
--- TOC entry 194 (class 1259 OID 16687)
+-- TOC entry 197 (class 1259 OID 26943)
 -- Name: variant_column; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -343,7 +343,7 @@ CREATE TABLE variant_column (
 
 
 --
--- TOC entry 193 (class 1259 OID 16685)
+-- TOC entry 198 (class 1259 OID 26949)
 -- Name: variant_column_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
@@ -357,7 +357,7 @@ CREATE SEQUENCE variant_column_id_seq
 
 --
 -- TOC entry 2249 (class 0 OID 0)
--- Dependencies: 193
+-- Dependencies: 198
 -- Name: variant_column_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
@@ -365,7 +365,7 @@ ALTER SEQUENCE variant_column_id_seq OWNED BY variant_column.id;
 
 
 --
--- TOC entry 2083 (class 2604 OID 16632)
+-- TOC entry 2081 (class 2604 OID 26951)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -373,7 +373,7 @@ ALTER TABLE ONLY field ALTER COLUMN id SET DEFAULT nextval('field_id_seq'::regcl
 
 
 --
--- TOC entry 2084 (class 2604 OID 16643)
+-- TOC entry 2082 (class 2604 OID 26952)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -381,7 +381,7 @@ ALTER TABLE ONLY filter ALTER COLUMN id SET DEFAULT nextval('filter_id_seq'::reg
 
 
 --
--- TOC entry 2089 (class 2604 OID 17160)
+-- TOC entry 2084 (class 2604 OID 26953)
 -- Name: fake_id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -389,7 +389,7 @@ ALTER TABLE ONLY sample_metadata ALTER COLUMN fake_id SET DEFAULT nextval('sampl
 
 
 --
--- TOC entry 2082 (class 2604 OID 16621)
+-- TOC entry 2085 (class 2604 OID 26954)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -397,7 +397,7 @@ ALTER TABLE ONLY tab ALTER COLUMN id SET DEFAULT nextval('tab_id_seq'::regclass)
 
 
 --
--- TOC entry 2081 (class 2604 OID 16609)
+-- TOC entry 2086 (class 2604 OID 26955)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -405,7 +405,7 @@ ALTER TABLE ONLY transcript ALTER COLUMN id SET DEFAULT nextval('transcript_id_s
 
 
 --
--- TOC entry 2085 (class 2604 OID 16654)
+-- TOC entry 2088 (class 2604 OID 26956)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -413,7 +413,7 @@ ALTER TABLE ONLY "user" ALTER COLUMN id SET DEFAULT nextval('user_id_seq'::regcl
 
 
 --
--- TOC entry 2088 (class 2604 OID 16690)
+-- TOC entry 2089 (class 2604 OID 26957)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -421,7 +421,7 @@ ALTER TABLE ONLY variant_column ALTER COLUMN id SET DEFAULT nextval('variant_col
 
 
 --
--- TOC entry 2105 (class 2606 OID 16695)
+-- TOC entry 2111 (class 2606 OID 26960)
 -- Name: DATA_COLUMNS_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -430,7 +430,7 @@ ALTER TABLE ONLY variant_column
 
 
 --
--- TOC entry 2093 (class 2606 OID 16637)
+-- TOC entry 2091 (class 2606 OID 26962)
 -- Name: FIELD_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -439,7 +439,7 @@ ALTER TABLE ONLY field
 
 
 --
--- TOC entry 2095 (class 2606 OID 16648)
+-- TOC entry 2093 (class 2606 OID 26964)
 -- Name: FILTER_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -448,7 +448,7 @@ ALTER TABLE ONLY filter
 
 
 --
--- TOC entry 2091 (class 2606 OID 16626)
+-- TOC entry 2101 (class 2606 OID 26966)
 -- Name: TAB_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -457,7 +457,7 @@ ALTER TABLE ONLY tab
 
 
 --
--- TOC entry 2097 (class 2606 OID 16659)
+-- TOC entry 2105 (class 2606 OID 26968)
 -- Name: USER_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -466,7 +466,7 @@ ALTER TABLE ONLY "user"
 
 
 --
--- TOC entry 2101 (class 2606 OID 18053)
+-- TOC entry 2095 (class 2606 OID 26970)
 -- Name: privilege_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -475,7 +475,7 @@ ALTER TABLE ONLY privilege
 
 
 --
--- TOC entry 2109 (class 2606 OID 17165)
+-- TOC entry 2097 (class 2606 OID 26972)
 -- Name: sample_metadata_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -484,7 +484,7 @@ ALTER TABLE ONLY sample_metadata
 
 
 --
--- TOC entry 2111 (class 2606 OID 17172)
+-- TOC entry 2099 (class 2606 OID 26974)
 -- Name: sample_uq; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -493,7 +493,7 @@ ALTER TABLE ONLY sample_metadata
 
 
 --
--- TOC entry 2103 (class 2606 OID 16684)
+-- TOC entry 2103 (class 2606 OID 26976)
 -- Name: tab_field_filter_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -502,7 +502,7 @@ ALTER TABLE ONLY tab_field_filter
 
 
 --
--- TOC entry 2099 (class 2606 OID 17832)
+-- TOC entry 2107 (class 2606 OID 26978)
 -- Name: user_name_key; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -511,7 +511,7 @@ ALTER TABLE ONLY "user"
 
 
 --
--- TOC entry 2107 (class 2606 OID 16700)
+-- TOC entry 2109 (class 2606 OID 26980)
 -- Name: user_visible_variant_column_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -520,7 +520,7 @@ ALTER TABLE ONLY user_visible_variant_column
 
 
 --
--- TOC entry 2115 (class 2606 OID 16714)
+-- TOC entry 2114 (class 2606 OID 26981)
 -- Name: field_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -529,7 +529,7 @@ ALTER TABLE ONLY tab_field_filter
 
 
 --
--- TOC entry 2116 (class 2606 OID 16719)
+-- TOC entry 2115 (class 2606 OID 26986)
 -- Name: filter_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -538,7 +538,7 @@ ALTER TABLE ONLY tab_field_filter
 
 
 --
--- TOC entry 2121 (class 2606 OID 18043)
+-- TOC entry 2117 (class 2606 OID 26991)
 -- Name: sample_metadata_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -547,7 +547,7 @@ ALTER TABLE ONLY user_smp_tab
 
 
 --
--- TOC entry 2120 (class 2606 OID 16749)
+-- TOC entry 2118 (class 2606 OID 26996)
 -- Name: tab_field_filter_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -556,7 +556,7 @@ ALTER TABLE ONLY user_smp_tab
 
 
 --
--- TOC entry 2114 (class 2606 OID 16709)
+-- TOC entry 2116 (class 2606 OID 27001)
 -- Name: tab_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -565,7 +565,7 @@ ALTER TABLE ONLY tab_field_filter
 
 
 --
--- TOC entry 2117 (class 2606 OID 16724)
+-- TOC entry 2120 (class 2606 OID 27006)
 -- Name: user_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -574,7 +574,7 @@ ALTER TABLE ONLY user_visible_variant_column
 
 
 --
--- TOC entry 2113 (class 2606 OID 16739)
+-- TOC entry 2113 (class 2606 OID 27011)
 -- Name: user_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -583,7 +583,7 @@ ALTER TABLE ONLY privilege
 
 
 --
--- TOC entry 2119 (class 2606 OID 16744)
+-- TOC entry 2119 (class 2606 OID 27016)
 -- Name: user_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -592,7 +592,7 @@ ALTER TABLE ONLY user_smp_tab
 
 
 --
--- TOC entry 2112 (class 2606 OID 16729)
+-- TOC entry 2112 (class 2606 OID 27021)
 -- Name: variant_column_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -601,7 +601,7 @@ ALTER TABLE ONLY field
 
 
 --
--- TOC entry 2118 (class 2606 OID 16734)
+-- TOC entry 2121 (class 2606 OID 27026)
 -- Name: variant_column_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -609,7 +609,7 @@ ALTER TABLE ONLY user_visible_variant_column
     ADD CONSTRAINT variant_column_fk FOREIGN KEY (variant_column_id) REFERENCES variant_column(id) MATCH FULL ON UPDATE CASCADE ON DELETE CASCADE;
 
 
--- Completed on 2017-09-02 16:04:40 CEST
+-- Completed on 2017-09-03 18:19:50 CEST
 
 --
 -- PostgreSQL database dump complete
