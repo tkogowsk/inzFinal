@@ -75,7 +75,7 @@ angular.module('filter').controller('FilterController', ['$scope', '$rootScope',
                             .groupBy('filterName')
                             .toPairs()
                             .map(function (currentItem) {
-                                return _.zipObject(['filterName', 'items'], currentItem)
+                                return _.zipObject(['filterName', 'items', 'active'], [...currentItem, true])
                             }).value();
 
                     });
@@ -94,8 +94,10 @@ angular.module('filter').controller('FilterController', ['$scope', '$rootScope',
             var payload = {};
             var list = [];
             _.forEach(tab.items, function (filters) {
-                if (!filters.inactive) {
+                console.log(filters);
+                if (filters.active) {
                     _.forEach(filters.items, function (field) {
+                        console.log(field);
                         if (field.value) {
                             list.push({
                                 filterName: field.filterName,

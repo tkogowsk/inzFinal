@@ -1,46 +1,49 @@
 body {
   overflow: hidden; }
 
-.transcript-table {
-  height: 80vh;
-  overflow: auto; }
-  .transcript-table th {
-    min-width: 80px; }
-  .transcript-table thead {
-    background: #f9f9f5; }
-    .transcript-table thead tr th {
-      width: 80px;
-      vertical-align: top;
-      /* white-space: nowrap; */
-      /* overflow: hidden !important; */
-      /* text-overflow: ellipsis; */
-      min-width: 150px;
-      max-width: 300px;
-      padding: 0; }
-      .transcript-table thead tr th .glyphicon {
-        width: 10%;
-        float: left;
-        line-height: inherit; }
-      .transcript-table thead tr th .header-fe-name {
-        margin-left: -10px;
-        float: right;
-        width: 90%;
-        overflow: hidden;
-        display: inline-block;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        text-align: center; }
-  .transcript-table tbody td {
-    text-align: right;
-    white-space: nowrap; }
-  .transcript-table .table-wrapper {
-    height: 85vh;
+.transcript-table-controller {
+  position: inherit;
+  float: right; }
+  .transcript-table-controller .transcript-table {
+    height: 80vh;
     overflow: auto; }
-  .transcript-table .search input {
-    width: 70%;
-    margin-left: 10%;
-    border: 1px #45633b solid;
-    border-radius: 2px; }
+    .transcript-table-controller .transcript-table th {
+      min-width: 80px; }
+    .transcript-table-controller .transcript-table thead {
+      background: #f9f9f5; }
+      .transcript-table-controller .transcript-table thead tr th {
+        width: 80px;
+        vertical-align: top;
+        /* white-space: nowrap; */
+        /* overflow: hidden !important; */
+        /* text-overflow: ellipsis; */
+        min-width: 150px;
+        max-width: 300px;
+        padding: 0; }
+        .transcript-table-controller .transcript-table thead tr th .glyphicon {
+          width: 10%;
+          float: left;
+          line-height: inherit; }
+        .transcript-table-controller .transcript-table thead tr th .header-fe-name {
+          margin-left: -10px;
+          float: right;
+          width: 90%;
+          overflow: hidden;
+          display: inline-block;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          text-align: center; }
+    .transcript-table-controller .transcript-table tbody td {
+      text-align: right;
+      white-space: nowrap; }
+    .transcript-table-controller .transcript-table .table-wrapper {
+      height: 85vh;
+      overflow: auto; }
+    .transcript-table-controller .transcript-table .search input {
+      width: 70%;
+      margin-left: 10%;
+      border: 1px #45633b solid;
+      border-radius: 2px; }
 
 .transcript-table-pagination {
   bottom: 0;
@@ -53,62 +56,70 @@ body {
     top: 0;
     position: absolute; }
 
-.filter-section {
-  padding: 5px;
-  background: #333333;
-  height: 100vh;
-  color: #ece8d7;
-  z-index: 1; }
-  .filter-section .filter-tabs {
-    width: 100%;
-    overflow-x: auto;
-    white-space: nowrap;
+.filter-controller {
+  height: 85vh;
+  position: absolute; }
+  .filter-controller .filter-header {
+    max-height: 5%;
+    font-size: 23px;
     text-align: center; }
-    .filter-section .filter-tabs .filter-tab {
-      display: inline-block;
-      overflow-x: auto; }
-      .filter-section .filter-tabs .filter-tab .filter-tab-name {
-        color: black;
+  .filter-controller .filter-section {
+    padding: 5px;
+    background: #333333;
+    color: #ece8d7;
+    z-index: 1;
+    height: 100%; }
+    .filter-controller .filter-section .filter-tabs {
+      width: 100%;
+      overflow-x: auto;
+      white-space: nowrap;
+      text-align: center;
+      min-height: 5%;
+      max-height: 10%; }
+      .filter-controller .filter-section .filter-tabs .filter-tab {
+        display: inline-block;
+        overflow-x: auto; }
+        .filter-controller .filter-section .filter-tabs .filter-tab .filter-tab-name {
+          color: black;
+          font-weight: bold;
+          font-size: 15px;
+          text-align: center;
+          margin-right: 12px;
+          border-radius: 9%;
+          background: #888888;
+          padding: 10px; }
+          .filter-controller .filter-section .filter-tabs .filter-tab .filter-tab-name.active {
+            background-color: #3bd3aa; }
+          .filter-controller .filter-section .filter-tabs .filter-tab .filter-tab-name:hover {
+            cursor: pointer; }
+        .filter-controller .filter-section .filter-tabs .filter-tab .wrapper {
+          transition: all linear 0.2s;
+          opacity: 1; }
+        .filter-controller .filter-section .filter-tabs .filter-tab .wrapper.ng-hide {
+          opacity: 0; }
+    .filter-controller .filter-section .filter-fields {
+      overflow: auto;
+      max-height: 85%;
+      text-align: center; }
+      .filter-controller .filter-section .filter-fields .filter {
+        margin: 10px 10px 0 0;
+        background: #3bd3aa;
+        border-radius: 5px;
+        padding-bottom: 20px; }
+        .filter-controller .filter-section .filter-fields .filter.inactive {
+          opacity: 0.4; }
+      .filter-controller .filter-section .filter-fields .filter-field p {
         font-weight: bold;
-        font-size: 20px;
-        text-align: center;
-        margin-right: 12px;
-        border-radius: 9%;
-        background: #888888;
-        padding: 10px; }
-        .filter-section .filter-tabs .filter-tab .filter-tab-name.active {
-          background-color: #3bd3aa; }
-        .filter-section .filter-tabs .filter-tab .filter-tab-name:hover {
-          cursor: pointer; }
-      .filter-section .filter-tabs .filter-tab .wrapper {
-        transition: all linear 0.2s;
-        opacity: 1; }
-      .filter-section .filter-tabs .filter-tab .wrapper.ng-hide {
-        opacity: 0; }
-  .filter-section .filter-fields {
-    margin-bottom: 10px;
-    width: inherit;
-    overflow: auto; }
-    .filter-section .filter-fields .filter {
-      margin: 10px 10px 0 0;
-      background: #3bd3aa;
-      border-radius: 5px;
-      padding-bottom: 20px; }
-      .filter-section .filter-fields .filter.inactive {
-        opacity: 0.4; }
-    .filter-section .filter-fields .filter-field p {
-      font-weight: bold;
-      font-size: 18px; }
-    .filter-section .filter-fields .filter-field select {
-      color: black;
-      width: 80%; }
-    .filter-section .filter-fields .filter-field input {
-      width: 80%; }
-    .filter-section .filter-fields label {
-      left: 20px;
-      position: absolute; }
-    .filter-section .filter-fields .filter-buttons {
-      margin-top: 10px; }
+        font-size: 15px;
+        margin-bottom: 0px;
+        margin-top: 4px; }
+      .filter-controller .filter-section .filter-fields .filter-field select {
+        color: black;
+        width: 80%; }
+      .filter-controller .filter-section .filter-fields .filter-field input {
+        width: 80%; }
+      .filter-controller .filter-section .filter-fields .filter-buttons {
+        margin-top: 10px; }
 
 .admin .spinner-background {
   position: fixed !important; }

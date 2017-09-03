@@ -1,7 +1,9 @@
 <div class="row">
-    <div ng-controller="FilterController" class="col-lg-2 col-md-2">
+    <div ng-controller="FilterController" class="col-lg-2 col-md-2 filter-controller">
         <div class="filter-section">
-            <h3>Filters</h3>
+            <div class="filter-header">
+                Filters
+            </div>
             <div class="filter-tabs">
                 <div ng-repeat="tab in groupedData" class="filter-tab">
 
@@ -13,15 +15,13 @@
                 </div>
             </div>
 
-            <div ng-repeat="tab in groupedData" class="filter-fields">
-                <div ng-show="tab.tabName == activeTabName" style="text-align: center">
+            <div ng-repeat="tab in groupedData" class="filter-fields" ng-if="tab.tabName == activeTabName">
                     <div ng-repeat="filter in tab.items track by $index" class="filter"
-                         ng-class="{ inactive: filter.inactive }">
+                         ng-class="{ inactive: !filter.active }">
                         <div class="filter-name">
                             {{filter.filterName}}
                             <label>
-                                Inactive
-                                <input type="checkbox" name="inactive" ng-model="filter.inactive">
+                                <input type="checkbox" name="active" ng-model="filter.active">
                             </label>
                         </div>
                         <div ng-repeat="field in filter.items track by $index">
@@ -93,7 +93,7 @@
                             </div>
                         </div>
                         <div ng-if="filter.countValue != null">
-                            This selection reduce list length to {{filter.countValue}}
+                            Selection reduce list size to {{filter.countValue}}
                         </div>
                     </div>
                     <div class="filter-buttons">
@@ -110,7 +110,6 @@
                                 ng-click="getAll()">Get all
                         </button>
                     </div>
-                </div>
             </div>
             <div class="spinner-background" ng-show="showFilterSpinner">
                 <div class="sk-cube-grid">
@@ -128,7 +127,7 @@
         </div>
     </div>
 
-    <div ng-controller="TranscriptsTableController" class="col-lg-10 col-md-10">
+    <div ng-controller="TranscriptsTableController" class="col-lg-10 col-md-10 transcript-table-controller">
         <div class="transcript-table table-wrapper">
             <table class="table">
                 <thead class="thead-inverse">

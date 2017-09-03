@@ -1,75 +1,84 @@
-.filter-section {
-  padding: 5px;
-  background: #333333;
-  height: 100vh;
-  color: #ece8d7;
-  z-index: 1;
-  .filter-tabs {
-    width: 100%;
-    overflow-x: auto;
-    white-space: nowrap;
+.filter-controller {
+  height: 85vh;
+  position: absolute;
+  .filter-header{
+    max-height: 5%;
+    font-size: 23px;
     text-align: center;
-    .filter-tab {
-      display: inline-block;
-      overflow-x: auto;
-      .filter-tab-name {
-        color: black;
-        font-weight: bold;
-        font-size: 20px;
-        text-align: center;
-        margin-right: 12px;
-        border-radius: 9%;
-        background: #888888;
-        padding: 10px;
-        &.active {
-          background-color: #3bd3aa;
-        }
-        &:hover {
-          cursor: pointer;
-        }
-      }
-      .wrapper {
-        transition: all linear 0.2s;
-        opacity: 1;
-      }
-      .wrapper.ng-hide {
-        opacity: 0;
-      }
-    }
   }
-  .filter-fields{
-    margin-bottom: 10px;
-    width: inherit;
-    overflow: auto;
-    .filter{
-      margin: 10px 10px 0 0;
-      background: #3bd3aa;
-      border-radius: 5px;
-      padding-bottom: 20px;
-      &.inactive {
-        opacity: 0.4;
+  .filter-section {
+    padding: 5px;
+    background: #333333;
+    color: #ece8d7;
+    z-index: 1;
+    height: 100%;
+    .filter-tabs {
+      width: 100%;
+      overflow-x: auto;
+      white-space: nowrap;
+      text-align: center;
+      min-height: 5%;
+      max-height: 10%;
+      .filter-tab {
+        display: inline-block;
+        overflow-x: auto;
+        .filter-tab-name {
+          color: black;
+          font-weight: bold;
+          font-size: 15px;
+          text-align: center;
+          margin-right: 12px;
+          border-radius: 9%;
+          background: #888888;
+          padding: 10px;
+          &.active {
+            background-color: #3bd3aa;
+          }
+          &:hover {
+            cursor: pointer;
+          }
+        }
+        .wrapper {
+          transition: all linear 0.2s;
+          opacity: 1;
+        }
+        .wrapper.ng-hide {
+          opacity: 0;
+        }
       }
     }
+    .filter-fields {
+      overflow: auto;
+      max-height: 85%;
+      text-align: center;
+      .filter {
+        margin: 10px 10px 0 0;
+        background: #3bd3aa;
+        border-radius: 5px;
+        padding-bottom: 20px;
+        &.inactive {
+          opacity: 0.4;
+        }
+      }
 
-    .filter-field{
-      p{
-        font-weight:bold;
-        font-size: 18px;
+      .filter-field {
+        p {
+          font-weight: bold;
+          font-size: 15px;
+          margin-bottom: 0px;
+          margin-top: 4px;
+        }
+        select {
+          color: black;
+          width: 80%;
+        }
+        input {
+          width: 80%;
+        }
       }
-      select {
-        color: black;
-        width: 80%;
+      .filter-buttons {
+        margin-top: 10px;
       }
-      input {
-        width: 80%;
-      }
-    }
-    label {
-      left: 20px;
-      position: absolute;
-    }
-    .filter-buttons{
-      margin-top: 10px;
     }
   }
 }

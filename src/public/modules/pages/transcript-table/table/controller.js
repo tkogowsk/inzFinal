@@ -46,7 +46,7 @@ angular.module('transcripts').controller('TranscriptsTableController', ['$scope'
         function prepareFiltersList(items) {
             var list = [];
             _.forEach(items, function (filter) {
-                if (!filter.inactive) {
+                if (filter.active) {
                     _.forEach(filter.items, function (field) {
                         if (field.value) {
                             list.push({
