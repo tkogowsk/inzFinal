@@ -94,10 +94,8 @@ angular.module('filter').controller('FilterController', ['$scope', '$rootScope',
             var payload = {};
             var list = [];
             _.forEach(tab.items, function (filters) {
-                console.log(filters);
                 if (filters.active) {
                     _.forEach(filters.items, function (field) {
-                        console.log(field);
                         if (field.value) {
                             list.push({
                                 filterName: field.filterName,

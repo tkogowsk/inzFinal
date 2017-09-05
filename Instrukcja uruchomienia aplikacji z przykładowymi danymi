@@ -13,6 +13,7 @@ postgres=# CREATE USER transcriptbrowseruser WITH PASSWORD 'tempass';
 postgres=# GRANT ALL PRIVILEGES ON DATABASE transcriptbrowserdb to transcriptbrowseruser;
 postgres=# \q
 
+Tworzenie tabel i ładowanie danych:
 $ psql -U transcriptbrowseruser transcriptbrowserdb -f inz_data.sql
 
 Uruchomienie serwera (ważne by podać port HTTPS w przeciwnym wypadku nie będą dostępne wszystkie funkcjonalności) :
