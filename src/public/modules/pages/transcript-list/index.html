@@ -8,7 +8,7 @@
         </tr>
         </thead>
         <tbody>
-        <tr ng-repeat="sample in samples track by $index">
+        <tr ng-repeat="sample in samples | orderBy: 'sampleId' track by $index">
             <td>
                 <a ui-sref="transcript-table({fakeId: sample.fakeId})">
                     {{sample.sampleId}}
