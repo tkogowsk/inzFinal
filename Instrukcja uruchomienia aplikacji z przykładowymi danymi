@@ -1,3 +1,4 @@
+# gate-interface
 Instrukcja uruchomienia aplikacji z przykładowymi danymi na systemie operacyjnym linux:
 
 Wymagane zależności:
@@ -13,7 +14,6 @@ postgres=# CREATE USER transcriptbrowseruser WITH PASSWORD 'tempass';
 postgres=# GRANT ALL PRIVILEGES ON DATABASE transcriptbrowserdb to transcriptbrowseruser;
 postgres=# \q
 
-Tworzenie tabel i ładowanie danych:
 $ psql -U transcriptbrowseruser transcriptbrowserdb -f inz_data.sql
 
 Uruchomienie serwera (ważne by podać port HTTPS w przeciwnym wypadku nie będą dostępne wszystkie funkcjonalności) :
@@ -28,4 +28,4 @@ Może się pojawić strona "This site can’t be reached". Należy wtedy odświe
 Login : admin
 Hasło : admin
 
-Transkrypt z optymalną liczbą rekordów : "sample_id_3"
+Próbka z optymalną liczbą rekordów : "sample_id_3"
